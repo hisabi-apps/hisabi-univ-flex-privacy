@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Hisabi Univ flex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #374151;
+            --accent-color: #ef4444;
+            --light-color: #f3f4f6;
+            --dark-color: #1f2937;
+            --success-color: #10b981;
+            --card-bg: #ffffff;
+            --body-bg: #f9fafb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--body-bg);
+            color: var(--secondary-color);
+            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(120deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 50%;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .logo i {
+            font-size: 45px;
+            color: var(--primary-color);
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-color);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 12px;
+            font-size: 1.5rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 20px 0 12px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        p {
+            margin-bottom: 18px;
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        
+        ul {
+            padding-left: 28px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        li::before {
+            content: "•";
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .highlight {
+            background-color: #fff8e6;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 8px;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .note {
+            background-color: #e8f4fd;
+            padding: 20px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background-color: #ffebee;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background: linear-gradient(120deg, var(--secondary-color), var(--dark-color));
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info a:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            color: var(--secondary-color);
+            border-top: 1px solid var(--light-color);
+            font-size: 0.95rem;
+        }
+        
+        .effective-date {
+            text-align: right;
+            font-style: italic;
+            color: #6b7280;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--light-color);
+            border-radius: 10px;
+            margin-right: 15px;
+            color: var(--primary-color);
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--light-color), transparent);
+            margin: 25px 0;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p class="subtitle">Hisabi Univ Flex - Protecting your privacy is our priority</p>
+    </header>
+    
+    <div class="container">
+        <p class="effective-date">Effective Date: September 17, 2025</p>
+        
+        <div class="card">
+            <h2><i class="fas fa-info-circle section-icon"></i>Introduction</h2>
+            <p>MOHAND MAHDI (Developer Name: NovaMinds) is committed to protecting the privacy of users of the "حساب المعدل-Hisabi Univ Flex" application. This Privacy Policy explains how we collect, use, and protect the information that may be gathered through the application.</p>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-database section-icon"></i>Information We Collect</h2>
+            <p>Hisabi Univ Flex is designed to help you calculate your academic averages. We collect certain types of information to enhance your experience and provide the app's functionalities.</p>
+            
+            <h3><i class="fas fa-user-edit"></i>User-Provided Information</h3>
+            <p>Any data you enter into the application (such as grades, weights, subject names) is processed and stored locally on your device only. We do not collect or store this data on our servers.</p>
+            
+            <h3><i class="fas fa-mobile-alt"></i>Basic Device Information</h3>
+            <p>General, non-identifiable information about your device (such as device type, operating system version, and internet connectivity information) may be collected for the purpose of improving performance and compatibility. This information does not personally identify you.</p>
+            
+            <h3><i class="fas fa-ad"></i>Advertising Information (Currently Inactive - To Be Activated Later)</h3>
+            <div class="warning">
+                <p><strong>Important Note:</strong> Currently, "Hisabi Univ Flex" does not display ads or collect data for advertising purposes. However, Google AdMob services will be activated to display ads after the closed testing period of the application ends.</p>
+            </div>
+            <p>Once advertising is activated, Google and its third-party service providers may collect information about your device and app usage (such as unique advertising IDs, device information, IP address, interactions with ads). This is done to personalize ads, improve their effectiveness, and deliver ads relevant to your interests. You can learn more about how Google uses information by visiting Google's Privacy Policy.</p>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-cogs section-icon"></i>How We Use Information</h2>
+            <p>We use the information we collect for the following purposes:</p>
+            <ul>
+                <li><strong>Operating and Improving App Functionality:</strong> To enable you to use app features like calculating averages and saving data locally.</li>
+                <li><strong>Enhancing User Experience:</strong> Understanding general app usage to improve design and performance.</li>
+                <li><strong>Ratings and Reviews:</strong> We may prompt users to provide ratings and reviews for the app through official app stores.</li>
+                <li><strong>Opening External Links:</strong> The app may include links to open related web pages or external resources.</li>
+                <li><strong>Displaying Ads (To Be Activated Later):</strong> Once advertising is activated, information collected by Google will be used to deliver targeted and relevant ads to you within the app.</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-share-alt section-icon"></i>Information Sharing</h2>
+            <p>We do not share any personal information or user data that you enter into the application with third parties, as it is stored locally on your device.</p>
+            
+            <h3><i class="fas fa-handshake"></i>Third-Party Service Providers (Upon Ad Activation)</h3>
+            <p>Once advertising is activated, non-personal data and advertising IDs will be shared with Google and its advertising service providers for the purpose of displaying targeted ads and measuring their performance. Please review Google's Privacy Policy for more information on how they process your data.</p>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-lock section-icon"></i>Data Security</h2>
+            <p>We take reasonable precautions to protect the information we collect from unauthorized access, disclosure, alteration, or destruction. However, no internet transmission or electronic storage method is 100% secure.</p>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-child section-icon"></i>Children's Privacy</h2>
+            <p>Hisabi Univ Flex is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you become aware that a child has provided us with personal information, please contact us.</p>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-exchange-alt section-icon"></i>Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for operational, legal, or regulatory reasons. Any changes will be posted on this page, and the updated Effective Date will become valid upon posting. We encourage you to review this policy periodically for any changes, especially when advertising is activated.</p>
+        </div>
+        
+        <div class="card">
+            <h2><i class="fas fa-envelope section-icon"></i>Contact Us</h2>
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hisabi.app@gmail.com">hisabi.app@gmail.com</a></p>
+                <p><i class="fas fa-user-tie"></i> Developer: MOHAND MAHDI (NovaMinds)</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="divider"></div>
+        <p class="copyright">© 2025 Hisabi Univ Flex. All rights reserved</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for back to top button
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+        
+        // Show/hide back to top button based on scroll position
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        
+        // Add subtle animation to cards when they come into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
